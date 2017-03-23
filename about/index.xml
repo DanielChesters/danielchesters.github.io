@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coin Coin</title>
-    <link>http://www.coin-coin.science/index.xml</link>
-    <description>Recent content on Coin Coin</description>
+    <title>Abouts on Coin Coin</title>
+    <link>http://www.coin-coin.science/about/index.xml</link>
+    <description>Recent content in Abouts on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Thu, 23 Mar 2017 21:21:58 +0100</lastBuildDate>
-    <atom:link href="http://www.coin-coin.science/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.coin-coin.science/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>À propos</title>
