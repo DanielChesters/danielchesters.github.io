@@ -22,9 +22,6 @@ Test, tu peux pas test!
 
 {{< figure src="/media/spf13.jpg" title="Steve Francia" >}}
 
-[Neat]({{< ref "blog/neat.md" >}})
-[Who]({{< relref "about.md#who" >}})
-
 {{< tweet 666616452582129664 >}}
 
 {{< youtube w7Ft2ymGmfc >}}
