@@ -2,3 +2,6 @@
 	path = public
 	url = git@github.com:DanielChesters/danielchesters.github.io.git
 	branch = master
+[submodule "themes/minimo"]
+	path = themes/minimo
+	url = https://github.com/MunifTanjim/minimo
