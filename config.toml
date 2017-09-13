@@ -1,0 +1,71 @@
+title = "Coin Coin"
+baseURL = "https://coin-coin.science/"
+copyright = ""
+Paginate = 5
+
+theme = "minimo"
+
+googleAnalytics = "" 
+disqusShortname = ""
+
+preserveTaxonomyNames = true
+
+[params]
+  description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
+  dateFormat = "2006-01-02"
+  copyrightOwner = "Daniel Chesters"
+  copyrightStartYear = "2017"
+  favicon = "favicon.ico"
+  hideEntryNavigation = false
+  customCSS = ["css/prism.css"]
+  customJS = ["js/prism.js"]
+  hideSocialMenu = false
+  showReadTime = true
+
+[params.seo]
+  # Title Separator: - – — · • * ⋆ | ~ « » < >
+  titleSeparator = "•"
+
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[social]
+  facebook = ""
+
+[author]
+  name = "Daniel Chesters"
+
+[author.social]
+  codepen = ""
+  email = ""
+  facebook = ""
+  github = ""
+  instagram = ""
+  twitter = ""
+  linkedin = ""
+
+[permalinks]
+  page = "/:slug/"
+
+
+[[menu.main]]
+  name = "Accueil"
+  weight = 1
+  identifier = "home"
+  url = "/"
+
+# Language Configuration
+defaultContentLanguage = "fr"
+
+[languages]
+  # edit this block for your own language
+  [languages.fr]
+    lang = "fr"
+    languageName = "Français"
+    weight = 1
