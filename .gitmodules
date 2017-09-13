@@ -4,4 +4,4 @@
 	branch = master
 [submodule "themes/minimo"]
 	path = themes/minimo
-	url = https://github.com/MunifTanjim/minimo
+	url = https://github.com/DanielChesters/minimo

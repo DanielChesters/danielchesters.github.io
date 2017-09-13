@@ -1,31 +1,71 @@
-languageCode = "fr-FR"
 title = "Coin Coin"
 baseURL = "http://www.coin-coin.science/"
-pagination = 5
+copyright = ""
+Paginate = 5
 
-theme = "after-dark"
+theme = "minimo"
 
-enableRobotsTXT = true # Suggested, enable robots.txt file
-googleAnalytics = "" # Optional, add tracking Id for analytics
-disqusShortname = "" # Optional, add Disqus shortname for comments
-SectionPagesMenu = "main" # Enable menu system for lazy bloggers
-footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
+googleAnalytics = "" 
+disqusShortname = ""
+
+preserveTaxonomyNames = true
 
 [params]
   description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
-  author = "Daniel Chesters" # Optional, controls author name display on posts
-  hide_author = false # Optional, set true to hide author name on posts
-  show_menu = true # Optional, set true to enable section menu
-  powered_by = true # Optional, set false to disable credits
-  images = [] # Suggested, adds default OpenGraph images
+  dateFormat = "2006-01-02"
+  copyrightOwner = "Daniel Chesters"
+  copyrightStartYear = "2017"
+  favicon = "favicon.ico"
+  hideEntryNavigation = false
+  customCSS = ["css/custom.css"]
+  customJS = ["js/custom.js"]
+  hideSocialMenu = false
+  showReadTime = true
+
+[params.seo]
+  # Title Separator: - – — · • * ⋆ | ~ « » < >
+  titleSeparator = "•"
+
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[social]
+  facebook = ""
+
+[author]
+  name = "Daniel Chesters"
+
+[author.social]
+  codepen = ""
+  email = ""
+  facebook = ""
+  github = ""
+  instagram = ""
+  twitter = ""
+  linkedin = ""
+
+[permalinks]
+  page = "/:slug/"
+
 
 [[menu.main]]
   name = "Accueil"
   weight = 1
   identifier = "home"
   url = "/"
-[[menu.main]]
-  name = "À propos"
-  weight = 2
-  identifier = "about"
-  url = "/about/"
+
+# Language Configuration
+defaultContentLanguage = "fr"
+
+[languages]
+  # edit this block for your own language
+  [languages.fr]
+    lang = "fr"
+    languageName = "Français"
+    weight = 1
