@@ -10,15 +10,15 @@ fi
 
 echo "Deleting old publication"
 rm -rf public
-git worktree prune
-rm -rf .git/worktrees/public/
+#git worktree prune
+#rm -rf .git/worktrees/public/
 mkdir public
 
-echo "Checking out master branch into public"
-git worktree add -B master public origin/master
+#echo "Checking out master branch into public"
+#git worktree add -B master public origin/master
 
-echo "Removing existing files"
-rm -rf public/*
+#echo "Removing existing files"
+#rm -rf public/*
 
 # Build the project.
 hugo -t minimo
