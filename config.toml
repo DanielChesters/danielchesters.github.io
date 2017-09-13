@@ -55,7 +55,7 @@ preserveTaxonomyNames = true
 
 
 [[menu.main]]
-  name = "Accueil"
+  name = "Home"
   weight = 1
   identifier = "home"
   url = "/"
@@ -69,3 +69,26 @@ defaultContentLanguage = "fr"
     lang = "fr"
     languageName = "Français"
     weight = 1
+  [[languages.fr.menu.main]]
+    url = "/fr/"
+    name = "Accueil"
+    weight = -99
+  [[languages.fr.menu.main]]
+    url = "/en/"
+    name = "English"
+    weight = 99
+  [languages.en]
+    lang = "en"
+    languageName = "English"
+    weight = 2
+    description = ""
+  [[languages.en.menu.main]]
+    url = "/"
+    name = "Home"
+    weight = -99
+  [[languages.en.menu.main]]
+    url = "/fr/"
+    name = "Français"
+    weight = 99
+
+  

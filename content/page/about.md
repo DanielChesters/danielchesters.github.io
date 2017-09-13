@@ -1,10 +1,10 @@
 +++
 description = ""
 date = "2017-03-23T21:21:58+01:00"
-title = "À propos"
+title = "About"
 comments = false
 menu = "main"
 +++
-Je me présente Daniel Chesters, Ingénieur développeur en Java/JEE depuis 2008 sur la région parisienne.
+Hi, I am Daniel Chesters, I am a Java/JEE developer since 2008 in Paris surrounding area.
 
-_À completer_
+_TBC_
