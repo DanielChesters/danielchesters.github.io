@@ -18,7 +18,7 @@ preserveTaxonomyNames = true
   favicon = "favicon.ico"
   hideEntryNavigation = false
   customCSS = ["css/prism.css"]
-  customJS = ["js/prism.js"]
+  customJS = ["js/prism.js", "js/custom.js"]
   hideSocialMenu = false
   showReadTime = true
 
