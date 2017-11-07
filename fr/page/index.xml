@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Coin Coin</title>
+    <link>https://coin-coin.science/fr/page/</link>
+    <description>Recent content in Pages on Coin Coin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Mar 2017 21:21:58 +0100</lastBuildDate>
+    
+	<atom:link href="https://coin-coin.science/fr/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>À propos</title>
+      <link>https://coin-coin.science/fr/a-propos/</link>
+      <pubDate>Thu, 23 Mar 2017 21:21:58 +0100</pubDate>
+      
+      <guid>https://coin-coin.science/fr/a-propos/</guid>
+      <description>Je me présente Daniel Chesters, Ingénieur développeur en Java/JEE depuis 2008 sur la région parisienne.
+À completer</description>
+    </item>
+    
+  </channel>
+</rss>
