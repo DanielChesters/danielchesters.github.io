@@ -8,50 +8,75 @@ theme = "minimo"
 googleAnalytics = "" 
 disqusShortname = ""
 
+Paginate = 5
 preserveTaxonomyNames = true
 
-[params]
-  description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
-  dateFormat = "2006-01-02"
-  copyrightOwner = "Daniel Chesters"
-  copyrightStartYear = "2017"
-  favicon = "favicon.ico"
-  hideEntryNavigation = false
-  customCSS = ["css/prism.css"]
-  customJS = ["js/prism.js", "js/custom.js"]
-  hideSocialMenu = false
-  showReadTime = true
+enableRobotsTXT = true # generate robots.txt
+
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+pygmentsCodefences = false
+
+# Missing translations will default to this content language
+defaultContentLanguage = "en"
+
+[params.info]
+description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
+title404 = "Nothing's here!"
+
+[params.assets]
+favicon = "favicon.ico"
+customCSS = ["css/prism.css"]
+customJS = ["js/prism.js", "js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "Daniel Chesters"
+startYear = "2017"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideSocialMenu = false
+showReadingTime = true
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
+
+[params.opengraph.twitter]
+page = "" # Twitter page username
 
 [params.seo]
-  # Title Separator: - – — · • * ⋆ | ~ « » < >
-  titleSeparator = "•"
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "•"
 
-[params.opengraph]
-  [params.opengraph.facebook]
-    admins = ""
-    appid = ""
+[params.social]
+codepen = ""
+email = ""
+facebook = ""
+github = ""
+instagram = ""
+linkedin = ""
+twitter = ""
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-
-[social]
-  facebook = ""
+[params.social.config]
+platforms = []
+#["github","facebook","twitter","instagram","email","codepen","linkedin"]
 
 [author]
-  name = "Daniel Chesters"
+name = "Daniel Chesters"
 
-[author.social]
-  codepen = ""
-  email = ""
-  facebook = ""
-  github = ""
-  instagram = ""
-  twitter = ""
-  linkedin = ""
+[taxonomies]
+category = "categories"
+tag = "tags"
 
 [permalinks]
-  page = "/:slug/"
+page = "/:slug/"
 
 
 [[menu.main]]
@@ -59,9 +84,6 @@ preserveTaxonomyNames = true
   weight = 1
   identifier = "home"
   url = "/"
-
-# Language Configuration
-defaultContentLanguage = "fr"
 
 [languages]
   # edit this block for your own language
