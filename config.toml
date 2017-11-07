@@ -1,7 +1,6 @@
 title = "Coin Coin"
 baseURL = "https://coin-coin.science/"
 copyright = ""
-Paginate = 5
 
 theme = "minimo"
 
