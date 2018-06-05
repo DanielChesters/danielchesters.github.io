@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://coin-coin.science/fr/post/wsl-archlinux/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://coin-coin.science/fr/a-propos/</loc>
     <lastmod>2017-03-23T21:21:58+01:00</lastmod>
     <xhtml:link
@@ -15,6 +20,12 @@
                 hreflang="fr"
                 href="https://coin-coin.science/fr/a-propos/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/fr/tags/archlinux/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -34,7 +45,7 @@
   
   <url>
     <loc>https://coin-coin.science/fr/</loc>
-    <lastmod>2017-03-23T21:21:58+01:00</lastmod>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -46,6 +57,18 @@
                 hreflang="fr"
                 href="https://coin-coin.science/fr/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/fr/categories/linux/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/fr/tags/linux/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -65,7 +88,14 @@
   </url>
   
   <url>
+    <loc>https://coin-coin.science/fr/post/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://coin-coin.science/fr/tags/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -77,6 +107,18 @@
                 hreflang="fr"
                 href="https://coin-coin.science/fr/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/fr/tags/wsl/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/fr/tags/windows/</loc>
+    <lastmod>2018-06-05T23:00:00+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

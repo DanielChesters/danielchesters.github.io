@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Coin Coin</title>
+    <link>https://coin-coin.science/fr/tags/linux/</link>
+    <description>Recent content in Linux on Coin Coin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 Jun 2018 23:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://coin-coin.science/fr/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comment installer Archlinux sous Windows 10 (version 1803) avec WSL</title>
+      <link>https://coin-coin.science/fr/post/wsl-archlinux/</link>
+      <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.science/fr/post/wsl-archlinux/</guid>
+      <description>Il y a quelques jours, j&amp;rsquo;ai décidé de tenter d&amp;rsquo;installer un ArchLinux sous WSL, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&amp;rsquo;ai un savoir limité).</description>
+    </item>
+    
+  </channel>
+</rss>
