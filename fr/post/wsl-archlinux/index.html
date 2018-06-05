@@ -166,11 +166,11 @@
   <div class='container entry-content'>
   
 
-<p>Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j&rsquo;ai rencontré.</p>
+<p>Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j&rsquo;ai rencontrés.</p>
 
 <p>Je me suis inspiré de la méthode expliquée par David Wood sur son <a href="https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux">site internet</a> et je l&rsquo;ai actualisé pour prendre en compte les évolutions des outils utilisés.</p>
 
-<p><em>Avertissement : ArchLinux n&rsquo;est pas officiellement supportée par WSL, des évolutions de WSL et/ou LxRunOffline peuvent conduire à rendre ce document obselète et je ne peux être tenu responsable pour les mauvaises manipulations que vous pourrez faire.</em></p>
+<p><em>Avertissement : ArchLinux n&rsquo;est pas officiellement supportée par WSL, des évolutions de WSL et/ou LxRunOffline peuvent conduire à rendre ce document obsolète et je ne peux être tenu responsable pour les mauvaises manipulations que vous pourrez faire.</em></p>
 
 <h1 id="installation-de-lxrunoffline">Installation de LxRunOffline</h1>
 
@@ -208,7 +208,7 @@
 
 <h1 id="configuration-d-archlinux">Configuration d&rsquo;ArchLinux</h1>
 
-<p>Une limitation depuis la Fall Creator Update (1709) de Windows 10 oblige de faire la première exécution de l&rsquo;instance WSL que vous venez de créer en tant qu&rsquo;administrateur</p>
+<p>Une limitation depuis la dernière version (1803) de Windows 10 oblige de faire la première exécution de l&rsquo;instance WSL que vous venez de créer en tant qu&rsquo;administrateur</p>
 
 <p>Donc dans une console de commande/PowerShell administrateur vous devez exécuter la commande suivante :</p>
 
@@ -234,7 +234,7 @@
 <pre><code class="language-bash">echo 'Server = http://archlinux.de-labrusse.fr/$repo/os/$arch' &gt;&gt; /etc/pacman.d/mirrorlist 
 </code></pre>
 
-<p>Pour vous devez initialiser le porte-clés pour la validation des signatures des paquets ArchLinux et je recommande installer les clés des constructeurs de paquets en récupérant le paquet directement sur le <a href="https://www.archlinux.org/packages/core/any/archlinux-keyring/">site d&rsquo;ArchLinux</a> en cliquant sur <em>Download From Mirror</em></p>
+<p>Pour vous devez initialiser le porte-clés pour la validation des signatures des paquets ArchLinux et je recommande installer les clés des constructeurs de paquets en récupérant le paquet directement sur le <a href="https://www.archlinux.org/packages/core/any/archlinux-keyring/">site d&rsquo;ArchLinux</a> en cliquant sur <em>Download From Mirror</em>.</p>
 
 <pre><code class="language-bash">pacman-key --init
 pacman -U /mnt/X/where/is/archlinux-keyring-20180404-1-any.pkg.tar.xz
@@ -251,9 +251,9 @@ pacman -U /mnt/X/where/is/archlinux-keyring-20180404-1-any.pkg.tar.xz
 
 <h2 id="réparation-de-fakeroot">Réparation de fakeroot</h2>
 
-<p>Si vous souhaitez construire des paquets en provenance d&rsquo;<a href="https://aur.archlinux.org">AUR</a> (ou de construire vos propres paquets maison) sous WSL, vous devez installer une version spécifique de fakeroot. En effet, le fakeroot fourni par ArchLinux ne fonctionne pas correctement sous WSL.</p>
+<p>Si vous souhaitez construire des paquets en provenance d&rsquo;<a href="https://aur.archlinux.org">AUR</a> (ou de construire vos propres paquets maisons) sous WSL, vous devez installer une version spécifique de fakeroot. En effet, le fakeroot fourni par ArchLinux ne fonctionne pas correctement sous WSL.</p>
 
-<p>Sous une installation ArchLinux fonctionnelle vous devez récupérer les sources pour construire le paquets <a href="https://aur.archlinux.org/packages/fakeroot-tcp">fakeroot-tcp</a>.</p>
+<p>Sous une installation ArchLinux fonctionnelle vous devez récupérer les sources pour construire le paquet <a href="https://aur.archlinux.org/packages/fakeroot-tcp">fakeroot-tcp</a>.</p>
 
 <pre><code class="language-bash">git clone https://aur.archlinux.org/fakeroot-tcp.git
 cd fakeroot-tcp
@@ -278,11 +278,15 @@ Puis dans votre instance vous devez exécuter :</p>
 <li>-v {uid} : la valeur qu&rsquo;on souhaite donner, avec {uid} l&rsquo;uid de l&rsquo;utilisateur qu&rsquo;on souhaite utiliser par défaut. On récupère cette valeur via la commande <code>id</code>.</li>
 </ul>
 
-<p><em>Note : Cette modification n&rsquo;a pas été pris en compte immédiatement dans mon cas et j&rsquo;ai du fermer ma session Windows/redemmarer Windows pour que ça soit pris en compte.</em></p>
+<p><em>Note : Cette modification n&rsquo;a pas été pris en compte immédiatement dans mon cas et j&rsquo;ai dû fermer ma session Windows/redémarer Windows pour que ça soit pris en compte.</em></p>
 
 <h2 id="création-d-un-raccourci-pour-lancer-l-instance-wsl">Création d&rsquo;un raccourci pour lancer l&rsquo;instance WSL</h2>
 
-<p>Je vous renvoie au <a href="https://github.com/DDoSolitary/LxRunOffline/wiki/Creating-shortcuts-to-installations">wiki</a> de LxRunOffline pour la création du raccourci. David Wood fournit une <a href="https://www.dropbox.com/sh/w3x7ajxwxig3up1/AAAnhLUctzTeAhshV7TJlqcZa?dl=0">icône</a> pour embellir votre raccourci ArchLinux</p>
+<p>Je vous renvoie au <a href="https://github.com/DDoSolitary/LxRunOffline/wiki/Creating-shortcuts-to-installations">wiki</a> de LxRunOffline pour la création du raccourci. David Wood fournit une <a href="https://www.dropbox.com/sh/w3x7ajxwxig3up1/AAAnhLUctzTeAhshV7TJlqcZa?dl=0">icône</a> pour embellir votre raccourci ArchLinux.</p>
+
+<h1 id="reste-à-faire">Reste à faire</h1>
+
+<p>Il me reste à voir si je ne pourrais pas supprimer certains paquets de base (comme le paquet <em>linux</em> ou <em>mkinitcpio</em>) qui ne sont pas utile dans le contexte de WSL.</p>
 
 </div>
 
