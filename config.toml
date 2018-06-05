@@ -18,6 +18,8 @@ pygmentsCodefences = false
 # Missing translations will default to this content language
 defaultContentLanguage = "en"
 
+enableEmoji = true
+
 [params.info]
 description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
 title404 = "Nothing's here!"
@@ -112,4 +114,9 @@ page = "/:slug/"
     name = "Français"
     weight = 99
 
-  
+ [params.widgets]
+ homepage = ["recent_posts"]
+ sidebar = ["about", "taxonomy_cloud"]
+
+ [params.sidebar]
+ enable = true
