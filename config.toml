@@ -21,7 +21,7 @@ defaultContentLanguage = "en"
 enableEmoji = true
 
 [params.info]
-description = "Des putes, des poneys et de l'inter…, enfin du dév, de la procratination, etc, etc…" # Suggested, controls default description meta
+description = "Just an another dev blog with black jack and hookers" # Suggested, controls default description meta
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -104,7 +104,6 @@ page = "/:slug/"
     lang = "en"
     languageName = "English"
     weight = 2
-    description = ""
   [[languages.en.menu.main]]
     url = "/"
     name = "Home"
@@ -114,9 +113,9 @@ page = "/:slug/"
     name = "Français"
     weight = 99
 
- [params.widgets]
+[params.widgets]
  homepage = ["recent_posts"]
  sidebar = ["about", "taxonomy_cloud"]
 
- [params.sidebar]
+[params.sidebar]
  enable = true
