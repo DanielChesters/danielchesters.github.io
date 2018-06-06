@@ -20,7 +20,7 @@ _Warning : ArchLinux is not officialy supported by WSL, some futures changes in 
 
 First step is to install [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline). This tool can create and manipulate WSL instance without used the Microsoft store and can used unsupported Linux distribution.
 
-For do install, I prefer user [Chocolatey](https://chocolatey.org/) :
+For do install, I prefer use [Chocolatey](https://chocolatey.org/) :
 
 ```batch
 choco install -y lxrunoffline
