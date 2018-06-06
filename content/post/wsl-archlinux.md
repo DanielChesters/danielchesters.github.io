@@ -1,6 +1,6 @@
 ---
-date: "2018-06-05T23:00:00+02:00"
-title: "Comment installer Archlinux sous Windows 10 (version 1803) avec WSL"
+date: "2018-06-06T21:40:00+02:00"
+title: "How to install ArchLinux on Windows 10 (1803) with WSL"
 authors: []
 categories:
   - Linux
@@ -9,115 +9,110 @@ tags:
   - Windows
   - Archlinux
   - WSL
-draft: true
+draft: false
 ---
 
-Il y a quelques jours, j'ai décidé de tenter d'installer un ArchLinux sous [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j'ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j'ai rencontré.
+Some days ago, I decided to install ArchLinx on [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his [website](https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux) and I adapted for take account new version of Windows 10 and tools I used.
 
-Je me suis inspiré de la méthode expliquée par David Wood sur son [site internet](https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux) et je l'ai actualisé pour prendre en compte les évolutions des outils utilisés.
+_Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do._
 
-_Avertissement : ArchLinux n'est pas officiellement supportée par WSL, des évolutions de WSL et/ou LxRunOffline peuvent conduire à rendre ce document obselète et je ne peux être tenu responsable pour les mauvaises manipulations que vous pourrez faire._
+# LxRunOffline installation
 
-# Installation de LxRunOffline
+First step is to install [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline). This tool can create and manipulate WSL instance without used the Microsoft store and can used unsupported Linux distribution.
 
-La première étape consiste à installer l'utilitaire [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline). Cet utilitaire permet de gérer des instances WSL sans devoir passer par le Microsoft store et de créer des instances de distribution Linux non supportée.
-
-Pour l´installation, je préfère passer par [Chocolatey](https://chocolatey.org/) :
+For do install, I prefer user [Chocolatey](https://chocolatey.org/) :
 
 ```batch
 choco install -y lxrunoffline
 ```
+With Chocolatey, LxRunOffline will add WSL if not already install on your Windows and do a little modification in Windows Registry. You have to reboot Windows after this step.
 
-Via Chocolatey, l'installation de LxRunOffline va conduire à l'installation de WSL et d'une modification dans la base de registre. Un redémarrage de Windows est nécessaire par la suite.
-
-# Création de l'instance d'ArchLinux
-Une fois LxRunOffline installé, il faut récupérer le bootstrap d'Archlinux qui est disponible via ce [site](https://lxrunoffline.apphb.com/download/ArchLinux/) ou de récupérer le fichier archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz (où {yyyy.mm.dd} est la date de création du bootstrap, par exemple 2018.06.01 au moment de la rédaction de l'article) dans le dossier iso/latest/ de n'importe quel miroir ArchLinux. Puis dans une console Windows (ou PowerShell) de lancer :
+# Creation of ArchLinux's instance
+After that, you have to download the ArchLinux bootstrap, that available on this [site](https://lxrunoffline.apphb.com/download/ArchLinux/) or in any ArchLinux mirror in iso/latest folder with the namearchlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz (with {yyyy.mm.dd} the creation date of the archive). In PowerShell (or cmd), you have to execute :
 
 ```batch
 lxrunoffline install -n ArchLinux -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz -d D:/WSL/ArchLinux -r root.x86_64
 ```
 
-* -n ArchLinux : permet de définir le nom de l'instance WSL
-* -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz : permet de définir l'archive qui sert de base à la création du système racine de l'instance
-* -d D:/WSL/ArchLinux : permet de définir le dossier qui va accueillir les fichiers de l´instance
-* -r root.x86_64 : défini le dossier dans l'archive qui contient le système racine du bootstrap
+* -n ArchLinux : define the name of WSL instance.
+* -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz : define the archive used to generate the root file system.
+* -d D:/WSL/ArchLinux : define the folder where the files instance will be saved.
+* -r root.x86_64 : define the folder in archive with the root system files.
 
-_Note : Pour la création de l'instance, je suis passé par une phase de recréation d'une archive racine pour LxRunOffline comme indiquée dans l'article de David Wood ayant découvert l'option -r via le [wiki de LxRunOffline](https://github.com/DDoSolitary/LxRunOffline/wiki) trop tard._
+_Note : For the instance creation, I create a new archive based on ArchLinux bootstrap like said on David Wood's post. I discoved the -r option in the [LxRunOffline wiki](https://github.com/DDoSolitary/LxRunOffline/wiki) too late._
 
-Si l'exécution de la commande précédente finie par une erreur du genre :
+If, you got an error like this :
 
 ```batch
 [ERROR] Couldn't open the file or directory "D:\WSL\ArchLinux\rootfs\usr\share\perl5\core_perl\pod\".
 ```
 
-C'est que vous avez oublié de redémarrer Windows après l'installation de LxRunOffline. Dans ce cas, vous devez supprimer le dossier crée (D:\WSL\ArchLinux dans l'exemple), redémarrer Windows et recommencer.
+It is you have forgotten to do a restart after LxRunOffline installation. You have to remove the instance folder (D:\WSL\ArchLinux for example), reboot and retry.
 
-# Configuration d'ArchLinux
+# ArchLinux configuration
 
-Une limitation depuis la Fall Creator Update (1709) de Windows 10 oblige de faire la première exécution de l'instance WSL que vous venez de créer en tant qu'administrateur
-
-Donc dans une console de commande/PowerShell administrateur vous devez exécuter la commande suivante :
+Since Windows 10 last update (1803), you have to do a first run of your instance in administration PowerShell. So, to run your ArchLinux's instance, you have to execute (first time as administrator and as normal user the other time) :
 
 ```batch
 lxrunoffline run -n ArchLinux -w
 ```
 
-* -n ArchLinux : Le nom de l'instance WSL qu'on souhaite lancer
-* -w : Permet de ne pas utiliser le dossier en cours dans l'instance WSL
+* -n ArchLinux : define the instance name that we want to run
+* -w : say, we want to use the home folder in WSL instance instead the current folder.
 
-Si vous le ne faite pas vous aurez une erreur de ce genre :
+If you try to run the first time as a normal user, you will get this error :
 ```batch
 Error : 0x80070005
 ```
 
-Après ce premier lancement, vous pouvez lancer l'instance WSL dans une console/un PowerShell avec un utilisateur standard.
+You started in bash as root user.
 
-Vous vous trouvez directement dans ArchLinux dans un shell root.
-
-Avant de procéder à l'installation des paquets de base, vous devrez choisir un miroir ArchLinux (j'ai pris le premier miroir français de la liste)
+Before to do the base installation, you have to choose an ArchLinux mirror (I get the first french mirror, in my case, but you can get any mirror).
 ```bash
 echo 'Server = http://archlinux.de-labrusse.fr/$repo/os/$arch' >> /etc/pacman.d/mirrorlist 
 ```
-Pour vous devez initialiser le porte-clés pour la validation des signatures des paquets ArchLinux et je recommande installer les clés des constructeurs de paquets en récupérant le paquet directement sur le [site d'ArchLinux](https://www.archlinux.org/packages/core/any/archlinux-keyring/) en cliquant sur _Download From Mirror_ 
+Now, you have to initialize the ArchLinux keyring for package validation. You can get the keyring package directely from the [ArchLinux's website](https://www.archlinux.org/packages/core/any/archlinux-keyring/)) and do a click on _Download From Mirror_
 ```bash
 pacman-key --init
 pacman -U /mnt/X/where/is/archlinux-keyring-20180404-1-any.pkg.tar.xz
 ```
-
-Puis vous pourrez lancer l'installation des paquets de base d'ArchLinux
+Now, you can install the base packages :
 ```bash
 pacman -Syu base base-devel
 ```
-Et faire les manipulations que vous souhaitez pour votre instance WSL ArchLinux (changer de langue, installer les outils que vous souhaitez, etc.)
+And do the manipulations that you with your ArchLinux's instance (like change language, install packages, ...)
 
-# Détails post installation spécifiques
+# Post installation specific details
 
-## Réparation de fakeroot
-Si vous souhaitez construire des paquets en provenance d'[AUR](https://aur.archlinux.org) (ou de construire vos propres paquets maison) sous WSL, vous devez installer une version spécifique de fakeroot. En effet, le fakeroot fourni par ArchLinux ne fonctionne pas correctement sous WSL.
-
-Sous une installation ArchLinux fonctionnelle vous devez récupérer les sources pour construire le paquets [fakeroot-tcp](https://aur.archlinux.org/packages/fakeroot-tcp).
+## Fix fakeroot
+The standard fakeroot install by ArchLinux does not work well in WSL, you have to install a special version if you want build ArchLinux package (from [AUR](https://aur.archlinux.org) for example).
+On a real ArchLinux installation, you have to build [fakeroot-tcp](https://aur.archlinux.org/packages/fakeroot-tcp) package : 
 
 ```bash
 git clone https://aur.archlinux.org/fakeroot-tcp.git
 cd fakeroot-tcp
 makepkg -s
 ```
-Récupérez le paquet fakeroot-tcp-{x.xx-x}-x86_64.pkg.tar.xz généré (où le {x.xx-x} correspond à la version du dit paquet).
-Puis dans votre instance vous devez exécuter :
+And pick up the generated package (fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz), then in your ArchLinux's instance, you have to install this package :
+
 ```bash
 pacman -U /mnt/X/where/is/fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz
 ```
 
-## Définition de l'utilisateur par défaut
-Une fois que vous aurez créée un utilisateur pour votre instance, vous pourrez modifier votre instance WSL pour qu'elle démarre sur l'utilisateur de votre choix via la commande suivante :
+## Change default user
+When you have created a user, you can modify your ArchLinux's instance to start on this user instead root :
 ```batch
 lxrunoffline config-uid -n ArchLinux -v {uid}
 ```
-* -n ArchLinux : toujours le nom de l'instance qu'on souhaite modifier
-* -v {uid} : la valeur qu'on souhaite donner, avec {uid} l'uid de l'utilisateur qu'on souhaite utiliser par défaut. On récupère cette valeur via la commande `id`.
+* -n ArchLinux : The name of your WSL instance to modify.
+* -v {uid} : the default user id to set, you can get the {uid} with the `id` command.
 
-_Note : Cette modification n'a pas été pris en compte immédiatement dans mon cas et j'ai du fermer ma session Windows/redemmarer Windows pour que ça soit pris en compte._
+_Note : For me, this modification is not awareness immediately and I have to close my Windows session._
 
-## Création d'un raccourci pour lancer l'instance WSL
+## Creation of shortcut
 
-Je vous renvoie au [wiki](https://github.com/DDoSolitary/LxRunOffline/wiki/Creating-shortcuts-to-installations) de LxRunOffline pour la création du raccourci. David Wood fournit une [icône](https://www.dropbox.com/sh/w3x7ajxwxig3up1/AAAnhLUctzTeAhshV7TJlqcZa?dl=0) pour embellir votre raccourci ArchLinux
+I can read this [page](https://github.com/DDoSolitary/LxRunOffline/wiki/Creating-shortcuts-to-installations) of LxRunOffline's wiki about shortcut creation. David Wood provides an [icon](https://www.dropbox.com/sh/w3x7ajxwxig3up1/AAAnhLUctzTeAhshV7TJlqcZa?dl=0) for have a good-looking shortcut.
+
+# TODO
+
+The next step, for me, will be to see if we can remove some base packages and especially the linux and mkinitcpio packages. We do not need a Linux kernel in WSL and mkinitcpio generate errors on installation/update packages.
