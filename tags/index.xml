@@ -5,9 +5,46 @@
     <link>https://coin-coin.science/tags/</link>
     <description>Recent content in Tags on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Jun 2018 21:40:00 +0200</lastBuildDate>
     
 	<atom:link href="https://coin-coin.science/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Archlinux</title>
+      <link>https://coin-coin.science/tags/archlinux/</link>
+      <pubDate>Wed, 06 Jun 2018 21:40:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.science/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://coin-coin.science/tags/linux/</link>
+      <pubDate>Wed, 06 Jun 2018 21:40:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.science/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://coin-coin.science/tags/wsl/</link>
+      <pubDate>Wed, 06 Jun 2018 21:40:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.science/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://coin-coin.science/tags/windows/</link>
+      <pubDate>Wed, 06 Jun 2018 21:40:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.science/tags/windows/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Some days ago, I decided to install ArchLinx on WSL, for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his website and I adapted for take account new version of Windows 10 and tools I used.
+Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='How to install ArchLinux on Windows 10 (1803) with WSL • Coin Coin'>
+<meta property='og:description' content='Some days ago, I decided to install ArchLinx on WSL, for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his website and I adapted for take account new version of Windows 10 and tools I used.
+Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do.'>
+<meta property='og:url' content='https://coin-coin.science/post/wsl-archlinux/'>
+<meta property='og:site_name' content='Coin Coin'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Linux'><meta property='article:tag' content='Windows'><meta property='article:tag' content='Archlinux'><meta property='article:tag' content='WSL'><meta property='article:published_time' content='2018-06-06T21:40:00&#43;02:00'/><meta property='article:modified_time' content='2018-06-06T21:40:00&#43;02:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+  <title>How to install ArchLinux on Windows 10 (1803) with WSL • Coin Coin</title>
+  <link rel='canonical' href='https://coin-coin.science/post/wsl-archlinux/'>
+  
+  <link rel='alternate' hreflang='en' href='https://coin-coin.science/post/wsl-archlinux/'><link rel='alternate' hreflang='fr' href='https://coin-coin.science/fr/post/wsl-archlinux/'><link rel='alternate' hreflang='x-default' href='https://coin-coin.science/fr/post/wsl-archlinux/'>
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.cb99c271.css'><link rel='stylesheet' href='/css/prism.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+</head>
+
+
+<body class='page type-post has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Coin Coin
+    </h2>
+    <div class='desc'>
+    Just an another dev blog with black jack and hookers
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/archlinux' style='font-size:1em'>Archlinux</a>
+      </li><li>
+        <a href='/tags/linux' style='font-size:1em'>Linux</a>
+      </li><li>
+        <a href='/tags/wsl' style='font-size:1em'>WSL</a>
+      </li><li>
+        <a href='/tags/windows' style='font-size:1em'>Windows</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/fr/'>Français</a>
+      </li><li class='item'>
+        <a href='/about/'>About</a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Coin Coin</p><p class='desc site-desc'>Just an another dev blog with black jack and hookers</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>How to install ArchLinux on Windows 10 (1803) with WSL</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-06-06T21:40:00&#43;02:00'>2018-06-06</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Some days ago, I decided to install ArchLinx on <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>, for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his <a href="https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux">website</a> and I adapted for take account new version of Windows 10 and tools I used.</p>
+
+<p><em>Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do.</em></p>
+
+<h1 id="lxrunoffline-installation">LxRunOffline installation</h1>
+
+<p>First step is to install <a href="https://github.com/DDoSolitary/LxRunOffline">LxRunOffline</a>. This tool can create and manipulate WSL instance without used the Microsoft store and can used unsupported Linux distribution.</p>
+
+<p>For do install, I prefer use <a href="https://chocolatey.org/">Chocolatey</a> :</p>
+
+<pre><code class="language-batch">choco install -y lxrunoffline
+</code></pre>
+
+<p>With Chocolatey, LxRunOffline will add WSL if not already install on your Windows and do a little modification in Windows Registry. You have to reboot Windows after this step.</p>
+
+<h1 id="creation-of-archlinux-s-instance">Creation of ArchLinux&rsquo;s instance</h1>
+
+<p>After that, you have to download the ArchLinux bootstrap, that available on this <a href="https://lxrunoffline.apphb.com/download/ArchLinux/">site</a> or in any ArchLinux mirror in iso/latest folder with the namearchlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz (with {yyyy.mm.dd} the creation date of the archive). In PowerShell (or cmd), you have to execute :</p>
+
+<pre><code class="language-batch">lxrunoffline install -n ArchLinux -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz -d D:/WSL/ArchLinux -r root.x86_64
+</code></pre>
+
+<ul>
+<li>-n ArchLinux : define the name of WSL instance.</li>
+<li>-f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz : define the archive used to generate the root file system.</li>
+<li>-d D:/WSL/ArchLinux : define the folder where the files instance will be saved.</li>
+<li>-r root.x86_64 : define the folder in archive with the root system files.</li>
+</ul>
+
+<p><em>Note : For the instance creation, I create a new archive based on ArchLinux bootstrap like said on David Wood&rsquo;s post. I discoved the -r option in the <a href="https://github.com/DDoSolitary/LxRunOffline/wiki">LxRunOffline wiki</a> too late.</em></p>
+
+<p>If, you got an error like this :</p>
+
+<pre><code class="language-batch">[ERROR] Couldn't open the file or directory &quot;D:\WSL\ArchLinux\rootfs\usr\share\perl5\core_perl\pod\&quot;.
+</code></pre>
+
+<p>It is you have forgotten to do a restart after LxRunOffline installation. You have to remove the instance folder (D:\WSL\ArchLinux for example), reboot and retry.</p>
+
+<h1 id="archlinux-configuration">ArchLinux configuration</h1>
+
+<p>Since Windows 10 last update (1803), you have to do a first run of your instance in administration PowerShell. So, to run your ArchLinux&rsquo;s instance, you have to execute (first time as administrator and as normal user the other time) :</p>
+
+<pre><code class="language-batch">lxrunoffline run -n ArchLinux -w
+</code></pre>
+
+<ul>
+<li>-n ArchLinux : define the instance name that we want to run</li>
+<li>-w : say, we want to use the home folder in WSL instance instead the current folder.</li>
+</ul>
+
+<p>If you try to run the first time as a normal user, you will get this error :</p>
+
+<pre><code class="language-batch">Error : 0x80070005
+</code></pre>
+
+<p>You started in bash as root user.</p>
+
+<p>Before to do the base installation, you have to choose an ArchLinux mirror (I get the first french mirror, in my case, but you can get any mirror).</p>
+
+<pre><code class="language-bash">echo 'Server = http://archlinux.de-labrusse.fr/$repo/os/$arch' &gt;&gt; /etc/pacman.d/mirrorlist 
+</code></pre>
+
+<p>Now, you have to initialize the ArchLinux keyring for package validation. You can get the keyring package directely from the <a href="https://www.archlinux.org/packages/core/any/archlinux-keyring/">ArchLinux&rsquo;s website</a>) and do a click on <em>Download From Mirror</em></p>
+
+<pre><code class="language-bash">pacman-key --init
+pacman -U /mnt/X/where/is/archlinux-keyring-20180404-1-any.pkg.tar.xz
+</code></pre>
+
+<p>Now, you can install the base packages :</p>
+
+<pre><code class="language-bash">pacman -Syu base base-devel
+</code></pre>
+
+<p>And do the manipulations that you with your ArchLinux&rsquo;s instance (like change language, install packages, &hellip;)</p>
+
+<h1 id="post-installation-specific-details">Post installation specific details</h1>
+
+<h2 id="fix-fakeroot">Fix fakeroot</h2>
+
+<p>The standard fakeroot install by ArchLinux does not work well in WSL, you have to install a special version if you want build ArchLinux package (from <a href="https://aur.archlinux.org">AUR</a> for example).
+On a real ArchLinux installation, you have to build <a href="https://aur.archlinux.org/packages/fakeroot-tcp">fakeroot-tcp</a> package :</p>
+
+<pre><code class="language-bash">git clone https://aur.archlinux.org/fakeroot-tcp.git
+cd fakeroot-tcp
+makepkg -s
+</code></pre>
+
+<p>And pick up the generated package (fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz), then in your ArchLinux&rsquo;s instance, you have to install this package :</p>
+
+<pre><code class="language-bash">pacman -U /mnt/X/where/is/fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz
+</code></pre>
+
+<h2 id="change-default-user">Change default user</h2>
+
+<p>When you have created a user, you can modify your ArchLinux&rsquo;s instance to start on this user instead root :</p>
+
+<pre><code class="language-batch">lxrunoffline config-uid -n ArchLinux -v {uid}
+</code></pre>
+
+<ul>
+<li>-n ArchLinux : The name of your WSL instance to modify.</li>
+<li>-v {uid} : the default user id to set, you can get the {uid} with the <code>id</code> command.</li>
+</ul>
+
+<p><em>Note : For me, this modification is not awareness immediately and I have to close my Windows session.</em></p>
+
+<h2 id="creation-of-shortcut">Creation of shortcut</h2>
+
+<p>I can read this <a href="https://github.com/DDoSolitary/LxRunOffline/wiki/Creating-shortcuts-to-installations">page</a> of LxRunOffline&rsquo;s wiki about shortcut creation. David Wood provides an <a href="https://www.dropbox.com/sh/w3x7ajxwxig3up1/AAAnhLUctzTeAhshV7TJlqcZa?dl=0">icon</a> for have a good-looking shortcut.</p>
+
+<h1 id="todo">TODO</h1>
+
+<p>The next step, for me, will be to see if we can remove some base packages and especially the linux and mkinitcpio packages. We do not need a Linux kernel in WSL and mkinitcpio generate errors on installation/update packages.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='categories'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/linux'>Linux</a></div>
+<div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/linux'>Linux</a>, <a class='tag' href='/tags/windows'>Windows</a>, <a class='tag' href='/tags/archlinux'>Archlinux</a>, <a class='tag' href='/tags/wsl'>WSL</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p> &copy; 2017-2018 Daniel Chesters </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.9daad1e6.js'></script><script src='/js/prism.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+

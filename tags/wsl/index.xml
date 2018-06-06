@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coin Coin</title>
-    <link>https://coin-coin.science/</link>
-    <description>Recent content on Coin Coin</description>
+    <title>WSL on Coin Coin</title>
+    <link>https://coin-coin.science/tags/wsl/</link>
+    <description>Recent content in WSL on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 06 Jun 2018 21:40:00 +0200</lastBuildDate>
     
-	<atom:link href="https://coin-coin.science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coin-coin.science/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       <guid>https://coin-coin.science/post/wsl-archlinux/</guid>
       <description>Some days ago, I decided to install ArchLinx on WSL, for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his website and I adapted for take account new version of Windows 10 and tools I used.
 Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://coin-coin.science/about/</link>
-      <pubDate>Thu, 23 Mar 2017 21:21:58 +0100</pubDate>
-      
-      <guid>https://coin-coin.science/about/</guid>
-      <description>Hi, I am Daniel Chesters, I am a Java/JEE developer since 2008 in Paris surrounding area.
-TBC</description>
     </item>
     
   </channel>
