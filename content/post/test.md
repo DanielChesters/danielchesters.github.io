@@ -1,11 +1,8 @@
 +++
 description = ""
-tags = ["",""]
 date = "2017-03-12T23:39:36+01:00"
 title = "test"
-categories = [""]
 draft = true
-
 +++
 Test, tu peux pas test!
 
