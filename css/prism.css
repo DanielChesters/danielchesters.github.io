@@ -1,4 +1,4 @@
-/* PrismJS 1.14.0
+/* PrismJS 1.15.0
 https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript&plugins=line-highlight+line-numbers+toolbar+autoloader+show-language */
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -97,7 +97,8 @@ pre[class*="language-"] {
 
 .token.atrule,
 .token.attr-value,
-.token.function {
+.token.function,
+.token.class-name {
 	color: #e6db74;
 }
 
@@ -172,15 +173,15 @@ pre[data-line] {
 	content: none;
 }
 
-pre.line-numbers {
+pre[class*="language-"].line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
+pre[class*="language-"].line-numbers > code {
 	position: relative;
-    white-space: inherit;
+	white-space: inherit;
 }
 
 .line-numbers .line-numbers-rows {
@@ -213,6 +214,7 @@ pre.line-numbers > code {
 			padding-right: 0.8em;
 			text-align: right;
 		}
+
 div.code-toolbar {
 	position: relative;
 }

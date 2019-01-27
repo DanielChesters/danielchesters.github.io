@@ -80,22 +80,6 @@
   </url>
   
   <url>
-    <loc>https://coin-coin.science/tags/linux/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/linux/"
-                />
-  </url>
-  
-  <url>
     <loc>https://coin-coin.science/categories/linux/</loc>
     <lastmod>2018-06-06T21:40:00+02:00</lastmod>
     <priority>0</priority>
@@ -108,6 +92,22 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://coin-coin.science/categories/linux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.science/tags/linux/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.science/fr/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.science/tags/linux/"
                 />
   </url>
   
