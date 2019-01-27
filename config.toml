@@ -60,13 +60,14 @@ titleSeparator = "•"
 codepen = ""
 email = ""
 facebook = ""
-github = ""
+github = "DanielChesters"
+gitlab = "daniel.chesters"
 instagram = ""
-linkedin = ""
+linkedin = "daniel-chesters"
 twitter = ""
 
 [params.social.config]
-platforms = []
+platforms = ["linkedin", "github", "gitlab"]
 #["github","facebook","twitter","instagram","email","codepen","linkedin"]
 
 [author]
@@ -116,6 +117,7 @@ page = "/:slug/"
 [params.widgets]
  homepage = ["recent_posts"]
  sidebar = ["about", "taxonomy_cloud"]
+ footer = ["social_menu"]
 
 [params.sidebar]
  enable = true
