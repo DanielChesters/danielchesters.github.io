@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/daniel_chesters
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://coin-coin.science
+  * I am daniel_chesters (https://keybase.io/daniel_chesters) on keybase.
+  * I have a public key ASChpqZPY4DQ30hiKTRCiPvaxL00I1CoMFP22cJfMkVF8Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a1a6a64f6380d0df486229344288fbdac4bd342350a83053f6d9c25f324545f00a",
+      "host": "keybase.io",
+      "kid": "0120a1a6a64f6380d0df486229344288fbdac4bd342350a83053f6d9c25f324545f00a",
+      "uid": "1fff4982a26ce9380306d824cee39619",
+      "username": "daniel_chesters"
+    },
+    "merkle_root": {
+      "ctime": 1548703583,
+      "hash": "aa096592e0958d45f1d76028b9962fc276f24810203585e41c94388437a7aeeda823b3d9bea7daabb349dfef886108edad862c09746e63630528be9cbba75d71",
+      "hash_meta": "201c7203e811c23ffbf4e3de2c2989668b1d7b407da1b34864c5e1e9d1b45328",
+      "seqno": 4638711
+    },
+    "service": {
+      "entropy": "RGjmpGCBv2AsN1Iv+zy6llCt",
+      "hostname": "coin-coin.science",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.13.1"
+  },
+  "ctime": 1548703629,
+  "expire_in": 504576000,
+  "prev": "ec068346690db25a56e78e2f2e805befa6dcde02e1b710393e416976799b530b",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgoaamT2OA0N9IYik0Qoj72sS9NCNQqDBT9tnCXzJFRfAKp3BheWxvYWTESpcCDsQg7AaDRmkNslpW544vLoBb76bc3gLhtxA5PkFpdnmbUwvEILcreGsV7P2glD34sKMuAZxN7x4seZ36SXUfm12cJnYyAgHCo3NpZ8RA31wm8s5gCUF8dWYjzqeKIsleXRQSaRDjs7XMGRJzm7vKgFXwWFExTarYt6QQIvSqqbodYkm4IQ0s0WVCIQ99AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILHFrkGtBFK3mmx1HxN+xNlf5pFZsPVNX+vK/NQlKorvo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/daniel_chesters
+
+==================================================================
