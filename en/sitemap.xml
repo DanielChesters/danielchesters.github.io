@@ -1,193 +1,184 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://coin-coin.science/post/wsl-archlinux/</loc>
+    <loc>https://coin-coin.xyz/tags/archlinux/</loc>
     <lastmod>2018-06-06T21:40:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://coin-coin.science/fr/post/wsl-archlinux/"
+                href="https://coin-coin.xyz/fr/tags/archlinux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://coin-coin.science/post/wsl-archlinux/"
+                href="https://coin-coin.xyz/tags/archlinux/"
                 />
   </url>
   
   <url>
-    <loc>https://coin-coin.science/about/</loc>
+    <loc>https://coin-coin.xyz/categories/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/post/wsl-archlinux/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/post/wsl-archlinux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/post/wsl-archlinux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/categories/linux/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/categories/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/categories/linux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/tags/linux/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/tags/linux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/post/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/tags/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/tags/windows/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/tags/windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/tags/windows/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/tags/wsl/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/tags/wsl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/tags/wsl/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/about/</loc>
     <lastmod>2017-03-23T21:21:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://coin-coin.science/fr/a-propos/"
+                href="https://coin-coin.xyz/fr/a-propos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://coin-coin.science/about/"
+                href="https://coin-coin.xyz/about/"
                 />
   </url>
   
   <url>
-    <loc>https://coin-coin.science/tags/archlinux/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/archlinux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/archlinux/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/categories/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/categories/linux/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/categories/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/categories/linux/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/tags/linux/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/linux/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/page/</loc>
+    <loc>https://coin-coin.xyz/page/</loc>
     <lastmod>2017-03-23T21:21:58+01:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://coin-coin.science/fr/page/"
+                href="https://coin-coin.xyz/fr/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://coin-coin.science/page/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/post/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/post/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/tags/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/tags/wsl/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/wsl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/wsl/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://coin-coin.science/tags/windows/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.science/fr/tags/windows/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.science/tags/windows/"
+                href="https://coin-coin.xyz/page/"
                 />
   </url>
   

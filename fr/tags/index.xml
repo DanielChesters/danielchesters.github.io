@@ -1,48 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Coin Coin</title>
-    <link>https://coin-coin.science/fr/tags/</link>
+    <link>https://coin-coin.xyz/fr/tags/</link>
     <description>Recent content in Tags on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 05 Jun 2018 23:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://coin-coin.science/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coin-coin.xyz/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Archlinux</title>
-      <link>https://coin-coin.science/fr/tags/archlinux/</link>
+      <link>https://coin-coin.xyz/fr/tags/archlinux/</link>
       <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
       
-      <guid>https://coin-coin.science/fr/tags/archlinux/</guid>
+      <guid>https://coin-coin.xyz/fr/tags/archlinux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://coin-coin.science/fr/tags/linux/</link>
+      <link>https://coin-coin.xyz/fr/tags/linux/</link>
       <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
       
-      <guid>https://coin-coin.science/fr/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WSL</title>
-      <link>https://coin-coin.science/fr/tags/wsl/</link>
-      <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
-      
-      <guid>https://coin-coin.science/fr/tags/wsl/</guid>
+      <guid>https://coin-coin.xyz/fr/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://coin-coin.science/fr/tags/windows/</link>
+      <link>https://coin-coin.xyz/fr/tags/windows/</link>
       <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
       
-      <guid>https://coin-coin.science/fr/tags/windows/</guid>
+      <guid>https://coin-coin.xyz/fr/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://coin-coin.xyz/fr/tags/wsl/</link>
+      <pubDate>Tue, 05 Jun 2018 23:00:00 +0200</pubDate>
+      
+      <guid>https://coin-coin.xyz/fr/tags/wsl/</guid>
       <description></description>
     </item>
     

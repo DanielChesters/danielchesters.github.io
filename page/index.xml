@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Coin Coin</title>
-    <link>https://coin-coin.science/page/</link>
+    <link>https://coin-coin.xyz/page/</link>
     <description>Recent content in Pages on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 23 Mar 2017 21:21:58 +0100</lastBuildDate>
     
-	<atom:link href="https://coin-coin.science/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coin-coin.xyz/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://coin-coin.science/about/</link>
+      <link>https://coin-coin.xyz/about/</link>
       <pubDate>Thu, 23 Mar 2017 21:21:58 +0100</pubDate>
       
-      <guid>https://coin-coin.science/about/</guid>
+      <guid>https://coin-coin.xyz/about/</guid>
       <description>Hi, I am Daniel Chesters, I am a Java/JEE developer since 2008 in Paris surrounding area.
 TBC</description>
     </item>
