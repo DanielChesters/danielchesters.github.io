@@ -4,9 +4,9 @@ https://keybase.io/daniel_chesters
 
 I hereby claim:
 
-  * I am an admin of https://coin-coin.science
+  * I am an admin of https://coin-coin.xyz
   * I am daniel_chesters (https://keybase.io/daniel_chesters) on keybase.
-  * I have a public key ASChpqZPY4DQ30hiKTRCiPvaxL00I1CoMFP22cJfMkVF8Ao
+  * I have a public key with fingerprint A7B7 C28B 8793 7DCC 7DE9  8C1B 530F B3B2 E110 BD95
 
 To do so, I am signing this object:
 
@@ -14,39 +14,58 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "0120a1a6a64f6380d0df486229344288fbdac4bd342350a83053f6d9c25f324545f00a",
+      "fingerprint": "a7b7c28b87937dcc7de98c1b530fb3b2e110bd95",
       "host": "keybase.io",
-      "kid": "0120a1a6a64f6380d0df486229344288fbdac4bd342350a83053f6d9c25f324545f00a",
+      "key_id": "530fb3b2e110bd95",
+      "kid": "0101345ffe33fc1ea5df3194941ceae4c9b61c91c7113c9bc8b661249dbd9adabc810a",
       "uid": "1fff4982a26ce9380306d824cee39619",
       "username": "daniel_chesters"
     },
-    "merkle_root": {
-      "ctime": 1548703583,
-      "hash": "aa096592e0958d45f1d76028b9962fc276f24810203585e41c94388437a7aeeda823b3d9bea7daabb349dfef886108edad862c09746e63630528be9cbba75d71",
-      "hash_meta": "201c7203e811c23ffbf4e3de2c2989668b1d7b407da1b34864c5e1e9d1b45328",
-      "seqno": 4638711
-    },
     "service": {
-      "entropy": "RGjmpGCBv2AsN1Iv+zy6llCt",
-      "hostname": "coin-coin.science",
+      "hostname": "coin-coin.xyz",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 2
+    "version": 1
   },
-  "client": {
-    "name": "keybase.io go client",
-    "version": "2.13.1"
-  },
-  "ctime": 1548703629,
-  "expire_in": 504576000,
-  "prev": "ec068346690db25a56e78e2f2e805befa6dcde02e1b710393e416976799b530b",
-  "seqno": 14,
+  "ctime": 1572098231,
+  "expire_in": 157680000,
+  "prev": "b6bdc4632172a74e3e67f9756f24144caffdef6081c1ba3440d5227c47e1d1a2",
+  "seqno": 16,
   "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgoaamT2OA0N9IYik0Qoj72sS9NCNQqDBT9tnCXzJFRfAKp3BheWxvYWTESpcCDsQg7AaDRmkNslpW544vLoBb76bc3gLhtxA5PkFpdnmbUwvEILcreGsV7P2glD34sKMuAZxN7x4seZ36SXUfm12cJnYyAgHCo3NpZ8RA31wm8s5gCUF8dWYjzqeKIsleXRQSaRDjs7XMGRJzm7vKgFXwWFExTarYt6QQIvSqqbodYkm4IQ0s0WVCIQ99AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILHFrkGtBFK3mmx1HxN+xNlf5pFZsPVNX+vK/NQlKorvo3RhZ80CAqd2ZXJzaW9uAQ==
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMN4AnicbZJ7UFRVHMeXhw8wht0ccDGKugOSDuI95969j8VJHlqZgFTTg4RZ7j33
+XLgCu7C7PJZHvAYZYpzMSSeVQMDScsZpDGnIwaSJIN0mgcnNkFeRWGkvBlArtrOM
+/tf545z5/c739znf8zvni5AAXbDfi6Efn53W9x3yu9x/vESX3Z3xSSUl2xQXZa6k
+8vHyggsU7HBa8jWFMlM0gLQEJE7iWJVjBFqhFZUVOAhFhmWhIKiyIiFWVhgWMiZa
+EhjaxKicIiJoUhnImliTStMSFUepmjUX24vsmtVJsBIv8wgKssCLDK8gxCtYFBCQ
+TQytyowMMQC0rIgmUphnc/gqiDlZcuB4zUZyJLAs2/sf/QPfNGDI4SpmGBUBLJkU
+lQEiK7IAYQmzSJQ5gESAeAAYEiBB5jgAWVEhGEmRSAIs+y5ZxgFVVVlRgBLkEBZJ
+HxiaUwTIIowZkQOiT+jAdqtUiIlakawaLrCgPNJHbHdQ1XEU2SzVEPb113eh+0Jk
+06ybfVN8uauCMIrsNqcN2QrIVp7TWeQw+0qdriKftgzLlvsUi6xZFdJPUlFK+JrN
+SpkBUSKn5sMCEw9pYpYBcRQuL9Ls2KJZl9OcQJPhOweXEqTMyQpiOQYCHko8ixnM
+8arImzgVsoBlkaSqClY5WgDkaSTy4LRigpBHLI+BAiRI+e5VbLURNkd8SrmE6dBy
+rZKzxI6p6s/7swJ1fsG6lSv8fR9NFxykf/D9nhVDlzYtNDR+m7Lxb/r1Y1u3pNdH
+XFHGTp569fpjJYJ7figsemAhIyS8vfuJpOYQ89Xktojjxdse1l+NTHwDD0mP7NsV
+0+y6nTS3Pff3xK/qQduY5V3Gk/hr8cmvj6T92Xq+bGb+zPRHMU0zBvO412Q8sbrx
+j5JNnn9ue6eMp9Ma2MEdGZMHjrrTsn9u9XQaAwZj+E5Dy722JUdt+ZX6PJ3rvF/W
+6sJn3h7uy8mMnXit9wxXp955r6lhnl2lCXPlNe7qHfqq9caa9pT0D57bN7fzyN7Y
+a9beiYGL6pSnu/3EjTXjI8an4tOzYy+iuq2GeyMrvv9tDh6Yf2vP/sF1sOP63bHF
+UHfPNHOB6WxiJ3aH2XZmHk1rOxvtnjWHfIZrjfVx3smcwlRDarQ9uCvKKw2/ubCu
+y/2jt5aev1acNZA6Gji+l4vRO2/8Uqc1NT85EtH6aPfB2fSwXbVL7wTxP1xuS8uc
+SAosfPxmRXTnpD7lO/jh0+pkeO+x/IqgS9VVfFlCS+TUZrThdGTyl3M9aAae+2um
+o+v9hJdjvP60bveWl/zZ4HCluQ4roy1Tey7U1A413urJGRKMgdHr7ZP9Pd/MPg82
+VsJXRj6t6L9bmVDFeaLmO25FnStwGX9a7Ducf3AUrDJc2pYytXblqYd4Q/3hQ4v8
+WNia/QFBdzKGN9x0e/5d+wJfkWxO+Q+OUcI8
+=p4Z7
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
