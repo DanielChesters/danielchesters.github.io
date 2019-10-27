@@ -44,6 +44,7 @@ listDateFormat = "2006-01-02"
 hideEntryNavigation = ["page"] # boolean / array of sections
 hideSocialMenu = false
 showReadingTime = true
+accentColor = "#ff4d00"
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
