@@ -63,21 +63,6 @@
   </url>
   
   <url>
-    <loc>https://coin-coin.xyz/categories/linux/</loc>
-    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://coin-coin.xyz/fr/categories/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://coin-coin.xyz/categories/linux/"
-                />
-  </url>
-  
-  <url>
     <loc>https://coin-coin.xyz/tags/linux/</loc>
     <lastmod>2018-06-06T21:40:00+02:00</lastmod>
     <xhtml:link
@@ -89,6 +74,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://coin-coin.xyz/tags/linux/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://coin-coin.xyz/categories/linux/</loc>
+    <lastmod>2018-06-06T21:40:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://coin-coin.xyz/fr/categories/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://coin-coin.xyz/categories/linux/"
                 />
   </url>
   
