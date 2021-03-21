@@ -98,5 +98,4 @@ class CellularAutomataCaveGenerator(mapHeight: Int = 50, mapWidth: Int = 50) : M
 
 {{< gist spf13 7896402 >}}
 
-{{< instagram BMokmydjG-M >}}
 
