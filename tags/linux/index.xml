@@ -5,11 +5,7 @@
     <link>https://coin-coin.xyz/tags/linux/</link>
     <description>Recent content in Linux on Coin Coin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 06 Jun 2018 21:40:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://coin-coin.xyz/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 Jun 2018 21:40:00 +0200</lastBuildDate><atom:link href="https://coin-coin.xyz/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to install ArchLinux on Windows 10 (1803) with WSL</title>
       <link>https://coin-coin.xyz/post/wsl-archlinux/</link>
