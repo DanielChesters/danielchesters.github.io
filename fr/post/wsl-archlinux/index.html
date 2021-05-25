@@ -1,214 +1,114 @@
-<!DOCTYPE html>
-<html lang='fr' dir='auto'><head>
-  <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous WSL, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité).'>
-<meta name='theme-color' content='#ff4d00'>
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Comment installer Archlinux sous Windows 10 (version 1803) avec WSL // Coin Coin</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Daniel Chesters" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://coin-coin.xyz/css/main.min.2f3f1cc5baff90d3fdbf8ce848b79b420e39454dba07b019b01dd0342f5e8453.css" />
 
-<meta property='og:title' content='Comment installer Archlinux sous Windows 10 (version 1803) avec WSL • Coin Coin'>
-<meta property='og:description' content='Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous WSL, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité).'>
-<meta property='og:url' content='https://coin-coin.xyz/fr/post/wsl-archlinux/'>
-<meta property='og:site_name' content='Coin Coin'>
-<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Linux'><meta property='article:tag' content='Windows'><meta property='article:tag' content='Archlinux'><meta property='article:tag' content='WSL'><meta property='article:published_time' content='2018-06-05T23:00:00&#43;02:00'/><meta property='article:modified_time' content='2018-06-05T23:00:00&#43;02:00'/><meta name='twitter:card' content='summary'>
-
-<meta name="generator" content="Hugo 0.83.1" />
-
-  <title>Comment installer Archlinux sous Windows 10 (version 1803) avec WSL • Coin Coin</title>
-  <link rel='canonical' href='https://coin-coin.xyz/fr/post/wsl-archlinux/'>
-  
-  <link rel='alternate' hreflang='fr' href='https://coin-coin.xyz/fr/post/wsl-archlinux/'><link rel='alternate' hreflang='x-default' href='https://coin-coin.xyz/fr/post/wsl-archlinux/'><link rel='alternate' hreflang='en' href='https://coin-coin.xyz/post/wsl-archlinux/'>
-  <link rel='icon' href='/favicon/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/prism.css'><style>
-:root{--color-accent:#ff4d00;}
-</style>
-
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
-</head>
-<body class='page type-post has-sidebar'>
-
-  <div class='site'><div id='sidebar' class='sidebar'>
-  <a class='screen-reader-text' href='#main-menu'>Aller au menu principal</a>
-
-  <div class='container'><section class='widget widget-about sep-after'>
-  <header>
     
-    <div class='logo'>
-      <a href='/fr/'>
-        <img src='/img/logo.png'>
-      </a>
-    </div>
-    
-    <h2 class='title site-title '>
-      <a href='/fr/'>
-      Coin Coin
-      </a>
-    </h2>
-    <div class='desc'>
-    Just an another dev blog with black jack and hookers
-    </div>
-  </header>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Comment installer Archlinux sous Windows 10 (version 1803) avec WSL"/>
+<meta name="twitter:description" content="Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous WSL, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité)."/>
 
-</section>
-<section class='widget widget-taxonomy_cloud sep-after'>
-  <header>
-    <h4 class='title widget-title'>Étiquettes</h4>
-  </header>
-
-  <div class='container list-container'>
-  <ul class='list taxonomy-cloud'><li>
-        <a href='/fr/tags/archlinux/' style='font-size:1em'>Archlinux</a>
-      </li><li>
-        <a href='/fr/tags/linux/' style='font-size:1em'>Linux</a>
-      </li><li>
-        <a href='/fr/tags/windows/' style='font-size:1em'>Windows</a>
-      </li><li>
-        <a href='/fr/tags/wsl/' style='font-size:1em'>WSL</a>
-      </li></ul>
-</div>
+    <meta property="og:title" content="Comment installer Archlinux sous Windows 10 (version 1803) avec WSL" />
+<meta property="og:description" content="Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous WSL, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://coin-coin.xyz/fr/post/wsl-archlinux/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-06-05T23:00:00&#43;02:00" />
+<meta property="article:modified_time" content="2018-06-05T23:00:00&#43;02:00" />
 
 
-</section>
-</div>
 
-  <div class='sidebar-overlay'></div>
-</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Menu principal'>
-  <div class='container'>
-    <a class='screen-reader-text' href='#content'>Aller au contenu</a>
-
-<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
-  <span class='screen-reader-text'>Déplier la barre latérale</span>
-  <span class='open'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><line x1="3" y1="12" x2="21" y2="12" />
-<line x1="3" y1="6" x2="21" y2="6" />
-<line x1="3" y1="18" x2="21" y2="18" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://coin-coin.xyz/"><img class="app-header-avatar" src="/img/logo.png" alt="Daniel Chesters" /></a>
+      <h1>Coin Coin</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/fr/">Accueil</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/en/">English</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/fr/a-propos/">À propos</a>
+      </nav>
+      <p>Just an another dev blog with black jack and hookers</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/danielChesters" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
 </svg>
-</span>
-  <span class='close'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><line x1="18" y1="6" x2="6" y2="18" />
-<line x1="6" y1="6" x2="18" y2="18" />
+          </a>
+        
+          <a href="https://gitlab.com/daniel.chesters" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-gitlab">
+  <title>Gitlab</title>
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path>
 </svg>
-</span>
-</button>
-    <ul><li class='item'>
-        <a href='/fr/'>Accueil</a>
-      </li><li class='item'>
-        <a href='/en/'>English</a>
-      </li><li class='item'>
-        <a href='/fr/a-propos/'>À propos</a>
-      </li></ul>
-  </div>
-</nav><div class='header-widgets'>
-        <div class='container'></div>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/daniel-chesters" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
       </div>
-
-      <header id='header' class='header site-header'>
-        <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Coin Coin</p><p class='desc site-desc'>Just an another dev blog with black jack and hookers</p>
-          </div>
-        </div>
-      </header>
-
-      <main id='content'>
-
-
-<article lang='fr' class='entry'>
-  <header class='header entry-header'>
-  <div class='container sep-after'>
-    <div class='header-info'>
-      <h1 class='title'>Comment installer Archlinux sous Windows 10 (version 1803) avec WSL</h1>
+    </header>
+    <main class="app-container">
       
-
-    </div>
-    <div class='entry-meta'>
-  <span class='posted-on'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-<line x1="16" y1="2" x2="16" y2="6" />
-<line x1="8" y1="2" x2="8" y2="6" />
-<line x1="3" y1="10" x2="21" y2="10" />
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Comment installer Archlinux sous Windows 10 (version 1803) avec WSL</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-<span class='screen-reader-text'>Publié le </span>
-  <time class='entry-date' datetime='2018-06-05T23:00:00&#43;02:00'>2018-06-05</time>
-</span>
-
-  
-  
-<span class='reading-time'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><circle cx="12" cy="12" r="10" />
-<polyline points="12 6 12 12 15 15" />
+          Jun 5, 2018
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-5 minutes de lecture
-</span>
-
-
-</div>
-
-
-  </div>
-</header>
-
-  
-  
-
-  <div class='container entry-content'>
-  <p>Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j&rsquo;ai rencontrés.</p>
+          5 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://coin-coin.xyz/fr/tags/linux/">Linux</a>
+              <a class="tag" href="https://coin-coin.xyz/fr/tags/windows/">Windows</a>
+              <a class="tag" href="https://coin-coin.xyz/fr/tags/archlinux/">Archlinux</a>
+              <a class="tag" href="https://coin-coin.xyz/fr/tags/wsl/">WSL</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Il y a quelques jours, j&rsquo;ai décidé de tenter d&rsquo;installer un ArchLinux sous <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>, pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j&rsquo;ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j&rsquo;ai rencontrés.</p>
 <p>Je me suis inspiré de la méthode expliquée par David Wood sur son <a href="https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux">site internet</a> et je l&rsquo;ai actualisé pour prendre en compte les évolutions des outils utilisés.</p>
 <p><em>Avertissement : ArchLinux n&rsquo;est pas officiellement supportée par WSL, des évolutions de WSL et/ou LxRunOffline peuvent conduire à rendre ce document obsolète et je ne peux être tenu responsable pour les mauvaises manipulations que vous pourrez faire.</em></p>
 <h1 id="installation-de-lxrunoffline">Installation de LxRunOffline</h1>
 <p>La première étape consiste à installer l&rsquo;utilitaire <a href="https://github.com/DDoSolitary/LxRunOffline">LxRunOffline</a>. Cet utilitaire permet de gérer des instances WSL sans devoir passer par le Microsoft store et de créer des instances de distribution Linux non supportée.</p>
 <p>Pour l´installation, je préfère passer par <a href="https://chocolatey.org/">Chocolatey</a> :</p>
-<pre><code class="language-batch">choco install -y lxrunoffline
-</code></pre>
-<p>Via Chocolatey, l&rsquo;installation de LxRunOffline va conduire à l&rsquo;installation de WSL et d&rsquo;une modification dans la base de registre. Un redémarrage de Windows est nécessaire par la suite.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">choco install -y lxrunoffline
+</code></pre></div><p>Via Chocolatey, l&rsquo;installation de LxRunOffline va conduire à l&rsquo;installation de WSL et d&rsquo;une modification dans la base de registre. Un redémarrage de Windows est nécessaire par la suite.</p>
 <h1 id="création-de-linstance-darchlinux">Création de l&rsquo;instance d&rsquo;ArchLinux</h1>
 <p>Une fois LxRunOffline installé, il faut récupérer le bootstrap d&rsquo;Archlinux qui est disponible via ce <a href="https://lxrunoffline.apphb.com/download/ArchLinux/">site</a> ou de récupérer le fichier archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz (où {yyyy.mm.dd} est la date de création du bootstrap, par exemple 2018.06.01 au moment de la rédaction de l&rsquo;article) dans le dossier iso/latest/ de n&rsquo;importe quel miroir ArchLinux. Puis dans une console Windows (ou PowerShell) de lancer :</p>
-<pre><code class="language-batch">lxrunoffline install -n ArchLinux -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz -d D:/WSL/ArchLinux -r root.x86_64
-</code></pre>
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">lxrunoffline install -n ArchLinux -f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz -d D:/WSL/ArchLinux -r root.x86_64
+</code></pre></div><ul>
 <li>-n ArchLinux : permet de définir le nom de l&rsquo;instance WSL</li>
 <li>-f X:/where/is/archlinux-bootstrap-{yyyy.mm.dd}-x86_64.tar.gz : permet de définir l&rsquo;archive qui sert de base à la création du système racine de l&rsquo;instance</li>
 <li>-d D:/WSL/ArchLinux : permet de définir le dossier qui va accueillir les fichiers de l´instance</li>
@@ -216,51 +116,42 @@
 </ul>
 <p><em>Note : Pour la création de l&rsquo;instance, je suis passé par une phase de recréation d&rsquo;une archive racine pour LxRunOffline comme indiquée dans l&rsquo;article de David Wood ayant découvert l&rsquo;option -r via le <a href="https://github.com/DDoSolitary/LxRunOffline/wiki">wiki de LxRunOffline</a> trop tard.</em></p>
 <p>Si l&rsquo;exécution de la commande précédente finie par une erreur du genre :</p>
-<pre><code class="language-batch">[ERROR] Couldn't open the file or directory &quot;D:\WSL\ArchLinux\rootfs\usr\share\perl5\core_perl\pod\&quot;.
-</code></pre>
-<p>C&rsquo;est que vous avez oublié de redémarrer Windows après l&rsquo;installation de LxRunOffline. Dans ce cas, vous devez supprimer le dossier crée (D:\WSL\ArchLinux dans l&rsquo;exemple), redémarrer Windows et recommencer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">[ERROR] Couldn&#39;t open the file or directory <span style="color:#e6db74">&#34;D:\WSL\ArchLinux\rootfs\usr\share\perl5\core_perl\pod\&#34;</span>.
+</code></pre></div><p>C&rsquo;est que vous avez oublié de redémarrer Windows après l&rsquo;installation de LxRunOffline. Dans ce cas, vous devez supprimer le dossier crée (D:\WSL\ArchLinux dans l&rsquo;exemple), redémarrer Windows et recommencer.</p>
 <h1 id="configuration-darchlinux">Configuration d&rsquo;ArchLinux</h1>
 <p>Une limitation depuis la dernière version (1803) de Windows 10 oblige de faire la première exécution de l&rsquo;instance WSL que vous venez de créer en tant qu&rsquo;administrateur</p>
 <p>Donc dans une console de commande/PowerShell administrateur vous devez exécuter la commande suivante :</p>
-<pre><code class="language-batch">lxrunoffline run -n ArchLinux -w
-</code></pre>
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">lxrunoffline run -n ArchLinux -w
+</code></pre></div><ul>
 <li>-n ArchLinux : Le nom de l&rsquo;instance WSL qu&rsquo;on souhaite lancer</li>
 <li>-w : Permet de ne pas utiliser le dossier en cours dans l&rsquo;instance WSL</li>
 </ul>
 <p>Si vous le ne faite pas vous aurez une erreur de ce genre :</p>
-<pre><code class="language-batch">Error : 0x80070005
-</code></pre>
-<p>Après ce premier lancement, vous pouvez lancer l&rsquo;instance WSL dans une console/un PowerShell avec un utilisateur standard.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">Error : 0x80070005
+</code></pre></div><p>Après ce premier lancement, vous pouvez lancer l&rsquo;instance WSL dans une console/un PowerShell avec un utilisateur standard.</p>
 <p>Vous vous trouvez directement dans ArchLinux dans un shell root.</p>
 <p>Avant de procéder à l&rsquo;installation des paquets de base, vous devrez choisir un miroir ArchLinux (j&rsquo;ai pris le premier miroir français de la liste)</p>
-<pre><code class="language-bash">echo 'Server = http://archlinux.de-labrusse.fr/$repo/os/$arch' &gt;&gt; /etc/pacman.d/mirrorlist 
-</code></pre>
-<p>Pour vous devez initialiser le porte-clés pour la validation des signatures des paquets ArchLinux et je recommande installer les clés des constructeurs de paquets en récupérant le paquet directement sur le <a href="https://www.archlinux.org/packages/core/any/archlinux-keyring/">site d&rsquo;ArchLinux</a> en cliquant sur <em>Download From Mirror</em>.</p>
-<pre><code class="language-bash">pacman-key --init
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;Server = http://archlinux.de-labrusse.fr/$repo/os/$arch&#39;</span> &gt;&gt; /etc/pacman.d/mirrorlist 
+</code></pre></div><p>Pour vous devez initialiser le porte-clés pour la validation des signatures des paquets ArchLinux et je recommande installer les clés des constructeurs de paquets en récupérant le paquet directement sur le <a href="https://www.archlinux.org/packages/core/any/archlinux-keyring/">site d&rsquo;ArchLinux</a> en cliquant sur <em>Download From Mirror</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman-key --init
 pacman -U /mnt/X/where/is/archlinux-keyring-20180404-1-any.pkg.tar.xz
-</code></pre>
-<p>Puis vous pourrez lancer l&rsquo;installation des paquets de base d&rsquo;ArchLinux</p>
-<pre><code class="language-bash">pacman -Syu base base-devel
-</code></pre>
-<p>Et faire les manipulations que vous souhaitez pour votre instance WSL ArchLinux (changer de langue, installer les outils que vous souhaitez, etc.)</p>
+</code></pre></div><p>Puis vous pourrez lancer l&rsquo;installation des paquets de base d&rsquo;ArchLinux</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -Syu base base-devel
+</code></pre></div><p>Et faire les manipulations que vous souhaitez pour votre instance WSL ArchLinux (changer de langue, installer les outils que vous souhaitez, etc.)</p>
 <h1 id="détails-post-installation-spécifiques">Détails post installation spécifiques</h1>
 <h2 id="réparation-de-fakeroot">Réparation de fakeroot</h2>
 <p>Si vous souhaitez construire des paquets en provenance d'<a href="https://aur.archlinux.org">AUR</a> (ou de construire vos propres paquets maisons) sous WSL, vous devez installer une version spécifique de fakeroot. En effet, le fakeroot fourni par ArchLinux ne fonctionne pas correctement sous WSL.</p>
 <p>Sous une installation ArchLinux fonctionnelle vous devez récupérer les sources pour construire le paquet <a href="https://aur.archlinux.org/packages/fakeroot-tcp">fakeroot-tcp</a>.</p>
-<pre><code class="language-bash">git clone https://aur.archlinux.org/fakeroot-tcp.git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://aur.archlinux.org/fakeroot-tcp.git
 cd fakeroot-tcp
 makepkg -s
-</code></pre>
-<p>Récupérez le paquet fakeroot-tcp-{x.xx-x}-x86_64.pkg.tar.xz généré (où le {x.xx-x} correspond à la version du dit paquet).
+</code></pre></div><p>Récupérez le paquet fakeroot-tcp-{x.xx-x}-x86_64.pkg.tar.xz généré (où le {x.xx-x} correspond à la version du dit paquet).
 Puis dans votre instance vous devez exécuter :</p>
-<pre><code class="language-bash">pacman -U /mnt/X/where/is/fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz
-</code></pre>
-<h2 id="définition-de-lutilisateur-par-défaut">Définition de l&rsquo;utilisateur par défaut</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -U /mnt/X/where/is/fakeroot-tcp-1.22-2-x86_64.pkg.tar.xz
+</code></pre></div><h2 id="définition-de-lutilisateur-par-défaut">Définition de l&rsquo;utilisateur par défaut</h2>
 <p>Une fois que vous aurez créée un utilisateur pour votre instance, vous pourrez modifier votre instance WSL pour qu&rsquo;elle démarre sur l&rsquo;utilisateur de votre choix via la commande suivante :</p>
-<pre><code class="language-batch">lxrunoffline config-uid -n ArchLinux -v {uid}
-</code></pre>
-<ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">lxrunoffline config-uid -n ArchLinux -v {uid}
+</code></pre></div><ul>
 <li>-n ArchLinux : toujours le nom de l&rsquo;instance qu&rsquo;on souhaite modifier</li>
 <li>-v {uid} : la valeur qu&rsquo;on souhaite donner, avec {uid} l&rsquo;uid de l&rsquo;utilisateur qu&rsquo;on souhaite utiliser par défaut. On récupère cette valeur via la commande <code>id</code>.</li>
 </ul>
@@ -270,103 +161,12 @@ Puis dans votre instance vous devez exécuter :</p>
 <h1 id="reste-à-faire">Reste à faire</h1>
 <p>Il me reste à voir si je ne pourrais pas supprimer certains paquets de base (comme le paquet <em>linux</em> ou <em>mkinitcpio</em>) qui ne sont pas utile dans le contexte de WSL.</p>
 
-</div>
-
-  
-<footer class='entry-footer'>
-  <div class='container sep-before'><div class='categories'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z" />
-</svg>
-<span class='screen-reader-text'>Catégories: </span><a class='category' href='/fr/categories/linux/'>Linux</a></div>
-<div class='tags'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z" />
-<line x1="7" y1="7" x2="7" y2="7" />
-</svg>
-<span class='screen-reader-text'>Étiquettes: </span><a class='tag' href='/fr/tags/linux/'>Linux</a>, <a class='tag' href='/fr/tags/windows/'>Windows</a>, <a class='tag' href='/fr/tags/archlinux/'>Archlinux</a>, <a class='tag' href='/fr/tags/wsl/'>WSL</a></div>
-
-  </div>
-</footer>
-
-
-</article>
-
-
-
-
-      </main>
-
-      <footer id='footer' class='footer'>
-        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
-    <ul><li>
-        <a href='https://github.com/DanielChesters' target='_blank' rel='noopener me'>
-          <span class='screen-reader-text'>Ouvrir Github dans un nouvel onglet</span><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-</svg>
-</a>
-      </li><li>
-        <a href='https://gitlab.com/daniel.chesters' target='_blank' rel='noopener me'>
-          <span class='screen-reader-text'>Ouvrir Gitlab dans un nouvel onglet</span><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z" />
-</svg>
-</a>
-      </li><li>
-        <a href='https://linkedin.com/in/daniel-chesters' target='_blank' rel='noopener me'>
-          <span class='screen-reader-text'>Ouvrir Linkedin dans un nouvel onglet</span><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-<rect x="2" y="9" width="4" height="12" />
-<circle cx="4" cy="4" r="2" />
-</svg>
-</a>
-      </li></ul>
-  </nav>
-</section><div class='copyright'>
-  <p> &copy; 2017-2021 Daniel Chesters — licensed under a <!-- raw HTML omitted -->Creative Commons Attribution-ShareAlike 4.0 International License<!-- raw HTML omitted -->.<!-- raw HTML omitted -->Rubber duck favicon/logo made by <!-- raw HTML omitted -->Freepik<!-- raw HTML omitted --> from <!-- raw HTML omitted --><a href="http://www.flaticon.com">www.flaticon.com</a><!-- raw HTML omitted --></p>
-</div>
-
-        </div>
-      </footer>
-
     </div>
-  </div><script>window.__assets_js_src="/assets/js/"</script>
+    <div class="post-footer">
+      
+    </div>
+  </article>
 
-<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/prism.js'></script><script src='/js/custom.js'></script>
-
-</body>
-
+    </main>
+  </body>
 </html>
-
