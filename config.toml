@@ -2,7 +2,7 @@ title = "Coin Coin"
 baseURL = "https://coin-coin.xyz/"
 copyright = ""
 
-theme = "minimo"
+theme = "m10c"
 
 googleAnalytics = "" 
 disqusShortname = ""
@@ -13,75 +13,46 @@ preserveTaxonomyNames = true
 enableRobotsTXT = true # generate robots.txt
 
 # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
-pygmentsCodefences = false
+pygmentsCodefences = true 
 
 # Missing translations will default to this content language
 defaultContentLanguage = "en"
 
 enableEmoji = true
 
-[params.info]
-description = "Just an another dev blog with black jack and hookers" # Suggested, controls default description meta
-title404 = "Nothing's here!"
+[params]
+author = "Daniel Chesters"
+description = "Just an another dev blog with black jack and hookers"
+favicon = "/favicon/favicon.ico"
+avatar = "/img/logo.png"
 
-[params.assets]
-favicon = "favicon/favicon.ico"
-customCSS = ["css/prism.css"]
-customJS = ["js/prism.js", "js/custom.js"]
-gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+[params.style]
+darkestColor = "#242930"
+darkColor = "#353b43"
+lightColor = "#afbac4"
+lightestColor = "#fff"
+primaryColor = "#ff4d00"
 
-[params.copyright]
-prefix = ""
-holder = "Daniel Chesters"
-startYear = "2017"
-suffix = """— licensed under a <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br/>Rubber duck favicon/logo made by <a href=
-"https://www.freepik.com/home">Freepik</a> from <a href="http://wwww.flaticon.com">www.flaticon.com</a>"""
+[[params.social]]
+icon = "github"
+name = "Github"
+url = "https://github.com/danielChesters"
 
-[params.settings]
-# date & time format: https://golang.org/pkg/time/
-dateFormat = "2006-01-02"
-listDateFormat = "2006-01-02"
-hideEntryNavigation = ["page"] # boolean / array of sections
-hideSocialMenu = false
-showReadingTime = true
-accentColor = "#ff4d00"
+[[params.social]]
+icon = "gitlab"
+name = "Gitlab"
+url = "https://gitlab.com/daniel.chesters"
 
-[params.opengraph.facebook]
-admins = [] # array of Facebook IDs
-appID = ""
-pageID = ""
-
-[params.opengraph.twitter]
-page = "" # Twitter page username
-
-[params.seo]
-# Title Separator: - – — · • * ⋆ | ~ « » < >
-titleSeparator = "•"
-
-[params.social]
-codepen = ""
-email = ""
-facebook = ""
-github = "DanielChesters"
-gitlab = "daniel.chesters"
-instagram = ""
-linkedin = "daniel-chesters"
-twitter = ""
-
-[params.social.config]
-platforms = ["linkedin", "github", "gitlab"]
-#["github","facebook","twitter","instagram","email","codepen","linkedin"]
+[[params.social]]
+icon = "linkedin"
+name = "Linkedin"
+url = "https://www.linkedin.com/in/daniel-chesters"
 
 [author]
 name = "Daniel Chesters"
 
-[taxonomies]
-category = "categories"
-tag = "tags"
-
 [permalinks]
 page = "/:slug/"
-
 
 [[menu.main]]
   name = "Home"
@@ -116,10 +87,3 @@ page = "/:slug/"
     name = "Français"
     weight = 99
 
-[params.widgets]
- homepage = ["recent_posts"]
- sidebar = ["about", "taxonomy_cloud"]
- footer = ["social_menu"]
-
-[params.sidebar]
- enable = true
