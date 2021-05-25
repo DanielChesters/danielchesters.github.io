@@ -21,7 +21,7 @@ echo "Removing existing files"
 rm -rf public/*
 
 # Build the project.
-hugo -t minimo
+hugo
 
 # Go To Public folder
 cd public
