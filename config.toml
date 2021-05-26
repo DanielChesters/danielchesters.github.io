@@ -22,6 +22,7 @@ enableEmoji = true
 
 [params]
 author = "Daniel Chesters"
+email = "daniel.chesters@gmail.com"
 description = "Just an another dev blog with black jack and hookers"
 favicon = "/favicon/favicon.ico"
 avatar = "/img/logo.png"
@@ -86,4 +87,34 @@ page = "/:slug/"
     url = "/fr/"
     name = "Français"
     weight = 99
+
+[mediaTypes]
+    [mediaTypes."text/gemini"]
+        suffixes = ["gmi"]
+    [mediaTypes."application/atom"]
+        suffixes = ["xml"]
+
+[outputFormats]
+    [outputFormats.GEMINI]
+        name = "GEMINI"
+        isPlainText = true
+        isHTML = false
+        mediaType = "text/gemini"
+        protocol = "gemini://"
+        permalinkable = true
+        path = "gemini/"
+    [outputFormats.ATOM_GEMINI]
+        name = "ATOM_GEMINI"
+        isPlainText = false
+        isHTML = true
+        protocol = "gemini://"
+        path = "gemini/"
+        permalinkable = true
+        mediaType = "application/atom"
+        baseName = "atom"
+         
+
+[outputs]
+    home = ["HTML", "RSS", "ATOM_GEMINI", "GEMINI"]
+    page = ["HTML"]
 

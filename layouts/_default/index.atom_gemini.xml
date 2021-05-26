@@ -1,0 +1,41 @@
+{{- $allowedRssSections := (slice "post") -}}
+{{- $baseurl := .Site.BaseURL -}}
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if or $.IsHome $.IsSection -}}
+{{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>{{ .Site.Title }}</title>
+  {{- $perm := replace .Permalink "/gemini" "" 1 -}}
+  {{- $alt := .Site.BaseURL | replaceRE `https?://(.+?)` "gemini://$1" -}}
+  {{ printf "<link rel=\"self\" type=\"application/atom+xml\" href=\"%s\"/>" $perm | safeHTML }}
+  {{ printf "<link rel=\"alternate\" type=\"text/html\" href=\"%s\"/>" $alt | safeHTML }}
+  <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+  <author>
+    <name>{{ .Site.Author.name }}</name>
+    <uri>{{ .Site.BaseURL | replaceRE `https?://(.+?)` "gemini://$1" }}</uri>
+  </author>
+  <id>{{ $perm }}</id>
+  {{ range $pages }}
+  {{ if in $allowedRssSections .Section }}
+  <entry>
+    <title>{{ .Title }}</title>
+    {{- $entryperm := .Permalink | replaceRE `https?://(.+?)` "gemini://$1" -}}
+    {{ printf "<link rel=\"alternate\" href=\"%s\"/>" $entryperm | safeHTML }}
+    <id>{{ $entryperm }}</id>
+    <published>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</published>
+    <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+    <summary>{{ if isset .Params "subtitle" }}{{ .Params.subtitle }}{{ else }}{{ .Summary | html }}{{ end }}</summary>
+  </entry>
+  {{ end }}
+  {{ end }}
+</feed>

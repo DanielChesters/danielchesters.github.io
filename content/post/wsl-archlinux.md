@@ -10,6 +10,9 @@ tags:
   - Archlinux
   - WSL
 draft: false
+outputs:
+  - HTML
+  - GEMINI
 ---
 
 Some days ago, I decided to install ArchLinx on [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his [website](https://davidtw.co/writings/2017/archlinux-on-the-windows-subsystem-for-linux) and I adapted for take account new version of Windows 10 and tools I used.

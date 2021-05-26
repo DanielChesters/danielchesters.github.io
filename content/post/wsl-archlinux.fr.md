@@ -10,6 +10,9 @@ tags:
   - Archlinux
   - WSL
 draft: false
+outputs:
+  - HTML
+  - GEMINI
 ---
 
 Il y a quelques jours, j'ai décidé de tenter d'installer un ArchLinux sous [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), pour avoir accès à une distribution Linux que je maitrise lors de mes sessions sous Windows 10 et tout simplement pour le sport. Voici donc comment installer Archlinux avec Windows Subsystem for Linux (ou toute autre distribution non disponible dans le store Microsoft, mais je ne renterais pas dans les détails spécifiques de toutes les distributions Linux, j'ai un savoir limité). Enfin, je vais surtout raconter ma tentative et les problèmes que j'ai rencontrés.
