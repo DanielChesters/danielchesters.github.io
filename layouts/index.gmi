@@ -29,8 +29,7 @@ I am Daniel Chesters, another dev (essentially as Java backend dev) that think a
 ### {{ $year }}-{{ .Key }}
 {{ range .Pages.ByDate.Reverse }}
 => {{ replace .RelPermalink "/gemini" "" 1}} {{ .Date.Format ("02") }} - {{ .Title }}
-{{ if isset .Params "subtitle"}}{{ .Params.subtitle }}{{ end }}{{ end }}
-{{ end }}
+{{ if isset .Params "subtitle"}}{{ .Params.subtitle }}{{ end }}{{ end }}{{ end }}
 {{ end }}
 
 # That's All Folks.

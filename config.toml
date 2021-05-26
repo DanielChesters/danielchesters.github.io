@@ -112,7 +112,6 @@ page = "/:slug/"
         permalinkable = true
         mediaType = "application/atom"
         baseName = "atom"
-         
 
 [outputs]
     home = ["HTML", "RSS", "ATOM_GEMINI", "GEMINI"]
