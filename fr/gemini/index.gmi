@@ -1,0 +1,38 @@
+
+```
+ ___________ 
+&lt; COIN-COIN >
+ ----------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+# Coin-Coin dans l'espace
+
+> Just anoth Gemlog with black jack and hookers. Je vais surtout raconter de la merde ici.
+Ce contenu est sous licence Creative Commons Attribution-ShareAlike 4.0 International License.
+=> https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+
+## About me
+
+Je suis Daniel Chesters, juste un autre développeur (principalement en temps développeur Java backend) qui pense qu'il est trop vieux pour ces conneries et qui vit depuis toujours pas loin de Paris.
+
+=> https://github.com/danielChesters Github
+=> https://gitlab.com/daniel.chesters Gitlab
+=> https://www.linkedin.com/in/daniel-chesters Linkedin
+=> /atom.xml Gemini Atom Feed
+
+### 2018-06
+
+=> /fr/post/ 05 - Posts
+
+=> /fr/post/wsl-archlinux/index.gmi 05 - Comment installer Archlinux sous Windows 10 (version 1803) avec WSL
+
+
+
+# That's All Folks.
+
+=> https://coin-coin.xyz COIN-COIN sur le WWW

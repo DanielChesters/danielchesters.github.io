@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Coin Coin</title><link rel="self" type="application/atom+xml" href="gemini://coin-coin.xyz/atom.xml"/>
+  <link rel="alternate" type="text/html" href="gemini://coin-coin.xyz/"/>
+  <updated>2018-06-06T21:40:00+0200</updated>
+  <author>
+    <name>Daniel Chesters</name>
+    <uri>gemini://coin-coin.xyz/</uri>
+  </author>
+  <id>gemini://coin-coin.xyz/atom.xml</id>
+  
+  
+  <entry>
+    <title>How to install ArchLinux on Windows 10 (1803) with WSL</title><link rel="alternate" href="gemini://coin-coin.xyz/post/wsl-archlinux/"/>
+    <id>gemini://coin-coin.xyz/post/wsl-archlinux/</id>
+    <published>2018-06-06T21:40:00+0200</published>
+    <updated>2018-06-06T21:40:00+0200</updated>
+    <summary>Some days ago, I decided to install ArchLinx on WSL, for get a well-known Linux when I am on Windows and for the fun. It is a guide and my feedback about ArchLinux on Windows Subsystem for Linux (WSL). I inspired by the post of David Wood on his website and I adapted for take account new version of Windows 10 and tools I used.
+Warning : ArchLinux is not officialy supported by WSL, some futures changes in WSL or LxRunOffline can make this guide out-of-date, and I cannot responsible for bad actions you can do.</summary>
+  </entry>
+  
+  
+  
+  
+</feed>
